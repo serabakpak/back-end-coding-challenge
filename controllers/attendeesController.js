@@ -1,17 +1,6 @@
-// DATABASE - hard-coded data of talks
+// DATABASE - hard-coded data of attendees
 
-talks = [
-  {
-    "title": "CILLUM NON",
-    "abstract": "Aliqua consequat mollit Lorem dolor nulla qui sunt tempor veniam eiusmod ullamco quis commodo.",
-    "room": 873,
-    "speaker": {
-      "name": "Hendrix Carroll",
-      "company": "Songlines",
-      "email": "hendrixcarroll@songlines.com",
-      "bio": "Magna velit adipisicing ullamco sint duis nisi."
-    },
-    "attendees": [
+attendees = [
       {
         "name": "Sanders Riley",
         "company": "Comtext",
@@ -29,20 +18,7 @@ talks = [
         "company": "Dreamia",
         "email": "alfredamitchell@dreamia.com",
         "registered": "2015-09-22T06:35:29 +07:00"
-      }
-    ]
-  },
-  {
-    "title": "AD IPSUM",
-    "abstract": "Fugiat nisi et mollit consequat sint.",
-    "room": 343,
-    "speaker": {
-      "name": "Melody Juarez",
-      "company": "Zillatide",
-      "email": "melodyjuarez@zillatide.com",
-      "bio": "Veniam do eu quis officia enim."
-    },
-    "attendees": [
+      },
       {
         "name": "Ashley Vargas",
         "company": "General Assembly",
@@ -60,19 +36,27 @@ talks = [
         "company": "Dreamia",
         "email": "michelle@dreamia.com",
         "registered": "2015-09-22T06:35:29 +07:00"
+      },
+      {
+        "name": "Christine Cate",
+        "company": "Ramona",
+        "email": "christinecate@ramona.com",
+        "registered": "2015-06-21T02:54:39 +07:00"
+      },
+      {
+        "name": "Manuel Garcia",
+        "company": "Comcast",
+        "email": "manualg@comcast.com",
+        "registered": "2015-09-22T06:35:29 +07:00"
       }
     ]
-  }
-]
 
-
-// GET /api/talks
+// GET /api/attendees
 
 function index(req, res) {
-  res.json(talks);
+  res.json(attendees);
 }
 
 module.exports = {
   index: index
 };
-

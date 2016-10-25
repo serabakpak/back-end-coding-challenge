@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/talks', controllers.talks.index);
-// app.get('/api/attendees', controllers.attendees.index);
+app.get('/api/attendees', controllers.attendees.index);
 
 
 //SERVER START
