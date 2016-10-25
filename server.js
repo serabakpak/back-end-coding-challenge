@@ -9,11 +9,12 @@ app.use(express.static('public'));
 var controllers = require('./controllers');
 
 
-//ROUTES
+//HTML ENDPOINTS
 app.get('/', function (req, res) {
-	res.send('Hello World');
+	res.sendFile(__dirname + '/views/index.html');
 });
 
+//JSON ENDPOINTS
 app.get('/api/talks', controllers.talks.index);
 app.get('/api/attendees', controllers.attendees.index);
 
