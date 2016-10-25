@@ -20,7 +20,7 @@ app.get('/api/attendees', controllers.attendees.index);
 
 
 //SERVER START
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
 	console.log('HTTP server listening at localhost:3000');
 });
 
